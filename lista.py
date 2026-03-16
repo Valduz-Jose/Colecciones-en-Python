@@ -28,3 +28,18 @@ print(f"Lista Modificada : {mi_lista}")
 mi_lista.insert(2,19)
 print(f"Lista Modificada : {mi_lista}")
 
+# eliminar elemnetos 
+# usando remove
+mi_lista.remove(5) #elimina el primer elemento con el valor 5, busca la coincidencia
+print(f"Lista Modificada : {mi_lista}")
+
+# removiendo por indice con pop
+mi_lista.pop(0) #elimina el elemento en el indice 1
+print(f"Lista Modificada : {mi_lista}")
+# usando del
+del mi_lista[3]
+print(f"Lista Modificada : {mi_lista}")
+
+# obtener sublistas
+sublista = mi_lista[1:3] # obtiene los elementos desde el indice 1 hasta el 2 (el indice 3 no se incluye)
+print(f"Sublista : {sublista}") 
