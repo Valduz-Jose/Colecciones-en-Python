@@ -1,9 +1,15 @@
 # Lista de suscriptores
 print("****** Lista de Suscriptores ******")
-suscriptores = {"luisa@gmail.com","marcos@gmail.com","elena@gmail.com"}
+suscriptores = set() #asi se define un set vacio
+
+numero_suscriptores = int(input("Ingrese el número de suscriptores a agregar: "))
+
+for _ in range(numero_suscriptores):
+    correo = input(f"Ingrese el correo del suscriptor {_+1}: ")
+    suscriptores.add(correo)
 
 print(f"Lista de suscriptores: {suscriptores}")
-nuevo_suscriptor = "marcos@gmail.com"
+nuevo_suscriptor = input("Ingrese el correo del nuevo suscriptor: ")
 
 if nuevo_suscriptor in suscriptores:
     print(f"El correo {nuevo_suscriptor} ya está suscrito.")
@@ -14,7 +20,8 @@ else:
 print(f"Lista de suscriptores: {suscriptores}")
 
 # Eliminar un suscriptor
-suscriptor_eliminar = "elena@gmail.com"
+suscriptor_eliminar = input("Ingrese el correo del suscriptor a eliminar: ")
+
 suscriptores.remove(suscriptor_eliminar)
 print(f"Correo {suscriptor_eliminar} eliminado de la lista de suscriptores.")
 
